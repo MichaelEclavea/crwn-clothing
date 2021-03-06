@@ -8,17 +8,15 @@ import SignInAndUpPage from './pages/sign-in-&-sign-up/SignInAndUpPage'
 import firestore from './firebase/firebase.utils'
 import './App.css'
 
-function App({ history }) {
+function App() {
   const [currentUser, setCurrentUser] = useState(null)
-  
+
   useEffect(() => {
     if(!currentUser) {
       firestore.auth().onAuthStateChanged(user => { setCurrentUser(user) })
-      console.log(currentUser)
-
     }
-    console.log(currentUser)
   },[currentUser])
+
   return (
     <Router>
     <Header currentUser={currentUser}/>

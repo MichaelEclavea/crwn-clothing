@@ -23,7 +23,7 @@ const SignIn = () => {
         <FormInput
           name="email"
           type="email"
-          onChange={(e) => setUserInfo({email: e.target.value})}
+          onChange={(e) => !userInfo.email ? '' : setUserInfo({email: e.target.value})}
           value={userInfo.email}
           required
         />
@@ -31,7 +31,7 @@ const SignIn = () => {
         <FormInput
           name="password"
           type="password"
-          onChange={(e) => setUserInfo({password: e.target.value})}
+          onChange={(e) => !userInfo.password ? '' : setUserInfo({password: e.target.value})}
           value={userInfo.password}
           required
         />
