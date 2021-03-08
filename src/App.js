@@ -5,7 +5,7 @@ import Header from './components/header/Header'
 import ShopPage from './pages/shop/ShopPage'
 import SignInAndUpPage from './pages/sign-in-&-sign-up/SignInAndUpPage'
 // import auth from './firebase/firebase.utils'
-import firestore from './firebase/firebase.utils'
+import firestore, { createUserProfileDocument } from './firebase/firebase.utils'
 import './App.css'
 
 function App() {
@@ -13,7 +13,10 @@ function App() {
 
   useEffect(() => {
     if(!currentUser) {
-      firestore.auth().onAuthStateChanged(user => { setCurrentUser(user) })
+      firestore.auth().onAuthStateChanged(async user => { 
+        createUserProfileDocument(user); 
+        console.log(user) 
+      })
     }
   },[currentUser])
 
