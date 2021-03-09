@@ -34,7 +34,6 @@ const SignUp = () => {
         <FormInput
           type="text"
           name="displayName"
-          label='Display Name'
           value={userInfo.displayName}
           onChange={(e) => setUserInfo({ ...userInfo, displayName: e.target.value })}
           label='Display Name'

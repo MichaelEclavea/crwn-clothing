@@ -15,29 +15,29 @@ const SignIn = () => {
   }
 
   return (
-    <div className="sign-in">
+    <div className='sign-in'>
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          name="email"
-          type="email"
+          name='email'
+          type='email'
           label='email'
           onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
           value={userInfo.email}
           required
         />
         <FormInput
-          name="password"
-          type="password"
+          name='password'
+          type='password'
           label='password'
           onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
           value={userInfo.password}
           required
         />
         <section className='buttons'>
-        <CustomButton type="submit" >Sign In</CustomButton>
-        <CustomButton onClick={signInWithGoogle} isGoogleSignIn={'google'}>Sign in with Google</CustomButton>
+        <CustomButton type='submit' >Sign In</CustomButton>
+        <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn={'google-sign-in'}>Sign in with Google</CustomButton>
         </section>
       </form>
     </div>
