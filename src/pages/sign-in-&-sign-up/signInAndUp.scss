@@ -1,3 +1,10 @@
+.sign-in-and-up {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
+}
+
 .sign-in {
   width: 380px;
   display: flex;
@@ -11,5 +18,15 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+  }
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  .title {
+    margin: 10px 0;
   }
 }

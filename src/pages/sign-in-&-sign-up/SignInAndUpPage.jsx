@@ -4,8 +4,9 @@ import SignUp from './SignUp'
 
 const SignInAndUp = () => {
   return (
-    <div>
+    <div className='sign-in-and-up'>
       <SignIn />
+      <SignUp />
     </div>
   )
 }
