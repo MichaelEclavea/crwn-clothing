@@ -23,7 +23,7 @@ const SignIn = () => {
           name="email"
           type="email"
           label='email'
-          onChange={(e) => !userInfo.email ? '' : setUserInfo({email: e.target.value})}
+          onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
           value={userInfo.email}
           required
         />
@@ -31,7 +31,7 @@ const SignIn = () => {
           name="password"
           type="password"
           label='password'
-          onChange={(e) => !userInfo.password ? '' : setUserInfo({password: e.target.value})}
+          onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
           value={userInfo.password}
           required
         />

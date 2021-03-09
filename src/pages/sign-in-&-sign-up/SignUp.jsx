@@ -21,8 +21,7 @@ const SignUp = () => {
     try {
       const { user } = await auth.createUserWithEmailAndPassword(email, password);
       createUserProfileDocument(user, { displayName });
-      let form = document.getElementById('signUp-form');
-      form.reset();
+      setUserInfo({displayName: '', email: '', password: '', confirmPassword: ''})
     } catch (error) {
       console.error('ERROR IN SIGN-UP', error);
     }
