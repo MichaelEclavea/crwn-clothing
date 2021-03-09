@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {ReactComponent as Logo} from '../../assets/crown.svg'
+import CartIcon from '../cart-icon/CartIcon'
+import CartDropdown from '../cart-dropdown/CartDropdown'
 import firestore from '../../firebase/firebase.utils'
 import './header.scss'
 
@@ -27,7 +29,9 @@ const Header = ({currentUser}) => {
             SIGN IN
           </Link>
         )}
+        <CartIcon/>
       </div>
+      <CartDropdown/> 
     </div>
   )
 }
