@@ -19,18 +19,18 @@ const SignIn = () => {
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
-        <label>Email</label>
         <FormInput
           name="email"
           type="email"
+          label='email'
           onChange={(e) => !userInfo.email ? '' : setUserInfo({email: e.target.value})}
           value={userInfo.email}
           required
         />
-        <label>Password</label>
         <FormInput
           name="password"
           type="password"
+          label='password'
           onChange={(e) => !userInfo.password ? '' : setUserInfo({password: e.target.value})}
           value={userInfo.password}
           required

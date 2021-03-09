@@ -33,36 +33,36 @@ const SignUp = () => {
       <span>Sign up with your email and password</span>
       <form className="sign-up-form" id='signUp-form' onSubmit={handleSubmit}>
         <FormInput
-          style={{backgroundColor: 'green'}}
           type="text"
           name="displayName"
           label='Display Name'
+          value={userInfo.displayName}
           onChange={(e) => setUserInfo({ ...userInfo, displayName: e.target.value })}
           label='Display Name'
           required
         />
-        <label>Email</label>
         <FormInput
           type="email"
           name="email"
+          value={userInfo.email}
           onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
           label='Email'
           required
         />
-        <label>Password</label>
         <FormInput
           type="password"
           name="password"
+          value={userInfo.password}
           onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
           label='Password'
           required
         />
-        <label>Confirm Password</label>
         <FormInput
           type="password"
-          name="confirmPassword" 
+          name="confirmPassword"
+          value={userInfo.confirmPassword} 
           onChange={(e) => setUserInfo({ ...userInfo, confirmPassword: e.target.value })}
-          placeholder='Confirm Password'
+          label='Confirm Password'
           required
         />
         <CustomButton type='submit'>Sign Up</CustomButton>
