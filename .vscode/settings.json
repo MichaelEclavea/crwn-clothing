@@ -3,7 +3,9 @@
         "accumalated",
         "behaviour",
         "firestore",
+        "middlewares",
         "mono",
+        "persistor",
         "quantity"
     ]
 }
