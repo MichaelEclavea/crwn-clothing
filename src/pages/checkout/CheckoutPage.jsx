@@ -30,7 +30,7 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
     <div className='total'>TOTAL: ${total}</div>
     {total > 0 ? <>
-    <h2 className='test-warning'>*STRIPE TEST CARD* 4242 4242 4242 4242 - Exp: 01/20 - CW: 123</h2>
+    <h2 className='test-warning'>*STRIPE TEST CARD* 4242 4242 4242 4242 - Exp: 01/22 - CW: 123</h2>
     <StripeButton price={total}/> 
     </>
     : ''}
