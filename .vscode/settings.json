@@ -6,6 +6,7 @@
         "middlewares",
         "mono",
         "persistor",
-        "quantity"
+        "quantity",
+        "signin"
     ]
 }
