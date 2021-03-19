@@ -1,0 +1,44 @@
+#contact-container {
+    margin: auto;
+}
+
+#contact-title {
+    font-size: 36px;
+    text-align: center;
+}
+
+#contact-text {
+    width: 40%;
+    max-width: 690px;
+}
+
+#contact-two {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+}
+
+#contact-img {
+    width: 100%;
+    max-width: 690px;
+    min-width: 400px;
+    box-shadow: 2px 5px 10px 2px rgba(128, 128, 128, 0.529);
+}
+
+@media screen and (max-width: 750px) {
+    #contact-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contact-text {
+        width: 400px;
+        margin: auto;
+    }
+    #contact-map{
+        width: 400px;
+    }
+} 
